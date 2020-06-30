@@ -1,0 +1,44 @@
+
+<!--<div *ngFor="let item of data;let i = index;">
+    <button class="accordion" (click)="toggleAccordian($event, i)" (change)="saverange(item)"   > {{item.parentName}} </button>
+    <div class="panel" id={{i}}  hide="!item.isActive">
+    <p *ngFor="let child of  getMarketplaceItems(childre)" > {{child.propertyName}} </p>
+  </div>
+  </div>-->
+  <div class="upload-btn-wrapper">
+    <button class="btn">Upload a file</button>
+    <input type="file" name="myfile" accept='text/plain' multiple (change)='openFile($event)'/>
+  </div>
+
+<br><br><br>
+
+  <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>Custom List</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="paren"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of paren" cdkDrag>{{item.propertyName}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>Existing Sanitys</h2>
+      
+<div *ngFor="let item of data;let i = index;">
+  <button class="accordion" (click)="toggleAccordian($event, i)" (change)="saverange(item)"   > {{item.parentName}} </button>
+  <div class="panel" id={{i}}  hide="!item.isActive">
+      <div
+        cdkDropList
+        [cdkDropListData]="childre"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let child of  getMarketplaceItems(childre)" cdkDrag> {{child.propertyName}}</div>
+      </div></div></div>
+
+
+    </div>
+  </div>
