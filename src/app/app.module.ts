@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,9 +16,11 @@ import { MobileComponent } from './mobile/mobile.component';
 import { PrixclimComponent } from './prixclim/prixclim.component';
 import { PrixradComponent } from './prixrad/prixrad.component';
 import { PrixplanComponent } from './prixplan/prixplan.component';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
+
     AppComponent,
     FirstComponent,
     ClimaComponent,
@@ -30,11 +33,13 @@ import { PrixplanComponent } from './prixplan/prixplan.component';
     MobileComponent,
     PrixclimComponent,
     PrixradComponent,
-    PrixplanComponent
+    PrixplanComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

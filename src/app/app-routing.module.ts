@@ -12,10 +12,12 @@ import { MobileComponent } from './mobile/mobile.component';
 import { PrixclimComponent } from './prixclim/prixclim.component';
 import { PrixradComponent } from './prixrad/prixrad.component';
 import { PrixplanComponent } from './prixplan/prixplan.component';
+import { CustomComponent } from './custom/custom.component';
 
 
 const routes: Routes = [
   {path:'first',component:FirstComponent},
+  {path:'custom',component:CustomComponent},
   {path:'clim',component:ClimaComponent},
   {path:'chauf',component:ChaufComponent},
   {path:'chauf/planche',component:PlancheComponent},
